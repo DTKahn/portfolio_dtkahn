@@ -1,3 +1,147 @@
+@import "./partials/_setup.scss";
+@import "./partials/_utils.scss";
+
+.wrapper {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $fHeaders;
+    text-transform: uppercase;
+}
+
 body {
-    background: rgb(238, 219, 225);
+    background: rgb(131, 131, 131);
+    font-family: $fBody;
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 8rem;
+    color: $light;
+}
+
+h2 {
+    font-weight: 400;
+    color: $light;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+// HEADER
+
+.navBar {
+    position: fixed;
+    width: 100%;
+}
+
+.navBar__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoName {
+    display: flex;
+    align-items: center;
+}
+
+.logoName__name {
+    font-size: 3rem;
+    margin-left: 10px;
+}
+
+.logoName__logo {
+    height: 40px;
+    width: 40px;
+    margin: 10px 0;
+
+}
+
+.navName {
+    font-weight: 800;
+}
+
+.nav__listOfLinks {
+    display: flex;
+}
+
+.nav__a {
+    color: $light;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 5px 0 5px 5px;
+    margin-left: 15px;
+}
+
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(70, 70, 70, 0.5),rgba(70, 70, 70, 0.5)), url(../../public/assets/hero_bw_bg.jpg) 50% 50%;
+    background-size: cover;
+}
+
+.hero__inner {
+    height: 93vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.hero__header,
+.hero__subheader {
+    width: 100%;
+    text-align: center;
+}
+
+.hero__downChevronDiv {
+    height: 7vh;
+    text-align: center;
+}
+
+.hero__downChevronLink {
+    color: $light;
+    font-size: 3rem;
+    padding: 10px;
+}
+
+.hero__subheader {
+    font-size: 5rem;
+}
+
+.hero__downChevron {
+    color: $light;
+    font-size: 4rem;
+}
+
+// MAIN
+
+.about,
+.skills,
+.projects,
+.contact {
+    height: 100vh;
+    background: rgb(175, 175, 175);
+}
+
+.about,
+.projects {
+    height: 100vh;
+    background: rgb(211, 211, 211);
+}
+
+.section__header {
+    font-size: 5rem;
 }
