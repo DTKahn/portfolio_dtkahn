@@ -7,6 +7,18 @@
     margin: 0 auto;
 }
 
+.skills__skill path {
+    fill: $yellow;
+}
+
+.skills__skill:hover path{
+    fill: darken($yellow, 3);
+}
+
+.skills__skill {
+    width: 50px;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: $fHeaders;
     text-transform: uppercase;
@@ -89,7 +101,7 @@ img {
 
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(70, 70, 70, 0.5),rgba(70, 70, 70, 0.5)), url(../../public/assets/hero_bw_bg.jpg) 50% 50%;
+    background: linear-gradient(rgba(70, 70, 70, 0.5),rgba(70, 70, 70, 0.5)), url(../../public/assets/hero_bw_bg.jpg) 30% 50%;
     background-size: cover;
 }
 
@@ -133,13 +145,13 @@ img {
 .projects,
 .contact {
     height: 100vh;
-    background: rgb(175, 175, 175);
+    background: rgb(129, 129, 129);
 }
 
 .about,
 .projects {
     height: 100vh;
-    background: rgb(211, 211, 211);
+    background: rgb(165, 165, 165);
 }
 
 .section__header {
