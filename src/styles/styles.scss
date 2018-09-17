@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5 {
 body {
     background: rgb(131, 131, 131);
     font-family: $fBody;
+    line-height: 1.5;
     font-size: 2rem;
 }
 
@@ -176,7 +177,6 @@ img {
 
 // MAIN
 
-.about,
 .contact {
     height: 100vh;
 }
@@ -338,5 +338,14 @@ img {
 
 
 .section__header--contact {
+    color: $light;
+}
+
+.contact__contactOption,
+.contact__link {
+    color: $light;
+}
+
+.contact__label {
     color: $light;
 }
