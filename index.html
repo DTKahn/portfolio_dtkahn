@@ -294,42 +294,38 @@
         <section class="contact section">
             <div class="wrapper contact__wrapper">
                 <h3 class="section__header section__header--contact">contact</h3>
-                <div class="contact__options">
-                    <ul class="contact__listOfOptions">
-                        <li class="contact__contactOption">
-                            <a class="contact__link" target="_blank" href="mailto:dtkahn@gmail.com">dtkahn@gmail.com</a>
-                        </li>
-                        <li class="contact__contactOption">
-                            647 893 5246
-                        </li>
-                        <li class="contact__contactOption">
-                            <a class="contact__link contact__link-socialIcon" target="_blank" href="#"><i class=" fab fa-twitter"></i></a>
-                            <a class="contact__link contact__link-socialIcon" target="_blank" href="#"><i class=" fab fa-linkedin-in"></i></a>
-                            <a class="contact__link contact__link-socialIcon" target="_blank" href="#"><i class=" fab fa-github"></i></a>
-                        </li>
-                    </ul>
-
+                <div class="contact__inner">
+                    <div class="contact__options">
+                        <ul class="contact__listOfOptions">
+                            <li class="contact__contactOption">
+                                <a class="contact__link" target="_blank" href="mailto:dtkahn@gmail.com">dtkahn@gmail.com</a>
+                            </li>
+                            <li class="contact__contactOption">
+                                647 893 5246
+                            </li>
+                            <li class="contact__contactOption">
+                                <a class="contact__link contact__link-socialIcon" target="_blank" href="#"><i class=" fab fa-twitter"></i></a>
+                                <a class="contact__link contact__link-socialIcon" target="_blank" href="#"><i class=" fab fa-linkedin-in"></i></a>
+                                <a class="contact__link contact__link-socialIcon" target="_blank" href="#"><i class=" fab fa-github"></i></a>
+                            </li>
+                        </ul>
+                    
+                    </div>
+                    <form class="contact__form">
+                    
+                        <div class="contact__input">
+                            <label class="contact__label" for="subject">Subject</label>
+                            <input class="contact__subject" id="subject" type="text">
+                        </div>
+                    
+                        <div class="contact__input">
+                            <label class="contact__label" for="contact__body">Body</label>
+                            <textarea class="contact__body" id="contact__body" cols="30" rows="10"></textarea>
+                        </div>
+                    
+                        <button class="contact__send">Send</button>
+                    </form>
                 </div>
-                <form class="contact__form">
-                    
-                    <div class="contact__input">
-                        <label class="contact__label" for="subject">Subject</label>
-                        <input id="subject" type="text">
-                    </div>
-
-                    <div class="contact__input">
-                        <label class="contact__label" for="subject">Body</label>
-                        <input id="subject" type="text">
-                    </div>
-
-                    
-                    <button>Send</button>
-                    
-
-                </form>
-                
-
-                
             </div>
             <canvas class="torontoBg" id="torontoBg"></canvas>
             <div class="offsetAnchor" id="contact"></div>

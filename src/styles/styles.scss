@@ -57,7 +57,7 @@ img {
 
 .header {
     position: relative;
-    z-index: 20;
+    z-index: 30;
 }
 
 .navBar {
@@ -67,7 +67,7 @@ img {
 
 .navBar__background {
     position: fixed;
-    z-index: 10;
+    z-index: 20;
     background: rgb(129, 129, 129);
     width: 100%;
     height: 60px;
@@ -78,7 +78,7 @@ img {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 30;
+    z-index: 40;
 }
 
 .logoName {
@@ -176,10 +176,6 @@ img {
 }
 
 // MAIN
-
-.contact {
-    height: 100vh;
-}
 
 .skills,
 .contact {
@@ -315,7 +311,7 @@ img {
 // CONTACT
 
 .contact {
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../../public/assets/toronto_bw.jpg) 50% 20%;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../public/assets/toronto_bw.jpg) 50% 20%;
     background-size: cover;
     position: relative;
 }
@@ -336,9 +332,12 @@ img {
     z-index: 10;
 }
 
-
 .section__header--contact {
     color: $light;
+}
+
+.contact__inner {
+    display: flex;
 }
 
 .contact__contactOption,
@@ -346,6 +345,50 @@ img {
     color: $light;
 }
 
+.contact__options {
+    width: 30%;
+}
+
+.contact__form {
+    width: 70%;
+}
+
 .contact__label {
     color: $light;
+}
+
+.contact__subject,
+.contact__body {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    border: none;
+    background: rgba($light, 0.8);
+}
+
+.contact__body {
+    resize: none;
+}
+
+.contact__input {
+    position: relative;
+}
+
+.contact__label {
+    position: absolute;
+    color: $dark;
+    top: 10px;
+    left: 20px;
+}
+
+.contact__send {
+    border: 1px solid #141414;
+    padding: 10px 25px;
+    background: white;
+    color: #141414;
+    transition: all 0.2s;
+}
+
+.contact__send:hover {
+    background: $yellow;
 }
