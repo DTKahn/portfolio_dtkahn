@@ -157,14 +157,12 @@ img {
     transition: all 0.2s;
 }
 
-.hero__downChevronLink:focus {
+.hero__downChevronLink:focus,
+.hero__downChevronLink:hover {
     outline: none;
     color: $yellow;
-}
-
-.hero__downChevronLink:hover {
-    color: $yellow;
     transform: scale(1.2);
+    animation: none;
 }
 
 .hero__subheader {
@@ -185,12 +183,12 @@ img {
 
 .skills,
 .contact {
-    background: rgb(129, 129, 129);
+    background: rgb(70, 70, 70);
 }
 
 .about,
 .projects {
-    background: rgb(165, 165, 165);
+    background: $light;
 }
 
 .section__header {
@@ -200,7 +198,12 @@ img {
 
 // ABOUT
 
+
 // SKILLS
+
+.section__header--skills {
+    color: $light;
+}
 
 .skills__listOfSkills {
     display: grid;
@@ -231,20 +234,25 @@ img {
     width: 50px;
 }
 
+.skills__skillName {
+    color: $light;
+}
+
 // PROJECTS
 
 .projects {
     background: $light;
 }
 
+// .projects__wrapper {
+//     display: flex;
+// }
 
-
-
-.projects__projectLi {
+.projects__wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 75px 0 150px 0;
     align-items: center;
+    padding: 75px 0;
 }
 
 .projects__links {
@@ -289,8 +297,46 @@ img {
 
 .projects__listOfProjects li:nth-child(2n+0) {
     text-align: right;
+    background: white;
 
     & .projects__links {
         float: right;
     }
+
+    & .projects__view {
+        background: $light;
+
+        &:hover {
+            background: $yellow;
+        }
+    }
+}
+
+// CONTACT
+
+.contact {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../../public/assets/toronto_bw.jpg) 50% 20%;
+    background-size: cover;
+    position: relative;
+}
+
+.torontoBg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: multiply;
+}
+
+.contact__wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+
+.section__header--contact {
+    color: $light;
 }
