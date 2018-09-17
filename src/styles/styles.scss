@@ -7,18 +7,6 @@
     margin: 0 auto;
 }
 
-.skills__skill path {
-    fill: $yellow;
-}
-
-.skills__skill:hover path{
-    fill: darken($yellow, 3);
-}
-
-.skills__skill {
-    width: 50px;
-}
-
 h1, h2, h3, h4, h5 {
     font-family: $fHeaders;
     text-transform: uppercase;
@@ -52,17 +40,44 @@ img {
     max-width: 100%;
 }
 
+.section {
+    padding: 50px 0;
+    position: relative;
+}
+
+.offsetAnchor {
+    position: absolute;
+    top: -60px;
+}
+
+
+
 // HEADER
+
+.header {
+    position: relative;
+    z-index: 20;
+}
 
 .navBar {
     position: fixed;
     width: 100%;
 }
 
+.navBar__background {
+    position: fixed;
+    z-index: 10;
+    background: rgb(129, 129, 129);
+    width: 100%;
+    height: 60px;
+}
+
 .navBar__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 30;
 }
 
 .logoName {
@@ -106,7 +121,7 @@ img {
 }
 
 .hero__inner {
-    height: 93vh;
+    height: calc(100vh - 125px);
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -118,15 +133,38 @@ img {
     text-align: center;
 }
 
+
 .hero__downChevronDiv {
-    height: 7vh;
     text-align: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
 }
 
 .hero__downChevronLink {
     color: $light;
     font-size: 3rem;
     padding: 10px;
+    display: block;
+    animation: pulse 1s infinite alternate;
+    transition: all 0.2s;
+}
+
+.hero__downChevronLink:focus {
+    outline: none;
+    color: $yellow;
+}
+
+.hero__downChevronLink:hover {
+    color: $yellow;
+    transform: scale(1.2);
 }
 
 .hero__subheader {
@@ -141,19 +179,118 @@ img {
 // MAIN
 
 .about,
-.skills,
-.projects,
 .contact {
     height: 100vh;
+}
+
+.skills,
+.contact {
     background: rgb(129, 129, 129);
 }
 
 .about,
 .projects {
-    height: 100vh;
     background: rgb(165, 165, 165);
 }
 
 .section__header {
     font-size: 5rem;
+    padding-bottom: 75px;
+}
+
+// ABOUT
+
+// SKILLS
+
+.skills__listOfSkills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: end;
+}
+
+.skill__skillLi {
+    display: block;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.skills__skill path {
+    fill: $yellow;
+}
+
+.skills__skill-firebase path .path1 {
+    fill:red;
+}
+
+.skills__skill:hover path{
+    fill: darken($yellow, 3);
+}
+
+.skills__skill {
+    width: 50px;
+}
+
+// PROJECTS
+
+.projects {
+    background: $light;
+}
+
+
+
+
+.projects__projectLi {
+    display: flex;
+    justify-content: space-between;
+    margin: 75px 0 150px 0;
+    align-items: center;
+}
+
+.projects__links {
+    display: flex;
+}
+
+.projects__imgDiv {
+    width: 40%;
+}
+
+.projects__projectInfo {
+    width: 55%;
+}
+
+.projects__projectTitle {
+    margin-bottom: 20px;
+}
+
+.projects__description {
+    margin-bottom: 20px;
+}
+
+.projects__links {
+    display: flex;
+}
+
+.projects__view {
+    border: 1px solid $dark;
+    padding: 10px 15px;
+    background: white;
+    color: $dark;
+    transition: all 0.2s;
+}
+
+.projects__view:hover {
+    background: $yellow;
+}
+
+.projects__view--onGitHub {
+    margin-left: 30px;
+}
+
+.projects__listOfProjects li:nth-child(2n+0) {
+    text-align: right;
+
+    & .projects__links {
+        float: right;
+    }
 }
