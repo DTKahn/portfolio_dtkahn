@@ -301,6 +301,17 @@ img {
     padding: 75px 0;
 }
 
+.projects__keyFeaturesList {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.projects__keyFeature {
+    margin-right: 10px;
+    padding: 2px 10px;
+    background: $yellow;
+}
+
 .projects__links {
     display: flex;
 }
@@ -341,9 +352,18 @@ img {
     margin-right: 30px;
 }
 
-.projects__listOfProjects li:nth-child(2n+0) {
+.projects__listOfProjects .projects__projectLi:nth-child(2n+0) {
     text-align: right;
     background: white;
+
+    & .projects__keyFeaturesList {
+        justify-content: flex-end;
+    }
+
+    & .projects__keyFeature {
+        margin-right: 0;
+        margin-left: 10px;
+    }
 
     & .projects__links {
         float: right;
@@ -363,7 +383,10 @@ img {
 // CONTACT
 
 .contact {
+    // no granim
     background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(../../public/assets/toronto_bw.jpg) 50% 20%;
+    // granim
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(../../public/assets/toronto_bw.jpg) 50% 20%;
     background-size: cover;
     position: relative;
     // padding: 50px 0 150px 0;
