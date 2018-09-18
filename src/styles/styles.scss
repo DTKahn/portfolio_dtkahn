@@ -117,8 +117,15 @@ img {
 
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(70, 70, 70, 0.5),rgba(70, 70, 70, 0.5)), url(../../public/assets/hero_bw_bg.jpg) 30% 50%;
+    background: linear-gradient(rgba(20, 20, 20, 0.2),rgba(20, 20, 20, 0.5)), url(../../public/assets/hero_bw_bg2.jpg) 30% 50%;
     background-size: cover;
+}
+
+.hero__wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .hero__inner {
@@ -126,6 +133,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    width: 70%;
 }
 
 .hero__header,
@@ -134,9 +142,11 @@ img {
     text-align: center;
 }
 
-
 .hero__downChevronDiv {
     text-align: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 @keyframes pulse {
@@ -153,9 +163,10 @@ img {
     color: $light;
     font-size: 3rem;
     padding: 10px;
-    display: block;
     animation: pulse 1s infinite alternate;
     transition: all 0.2s;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .hero__downChevronLink:focus,
@@ -194,6 +205,27 @@ img {
 
 // ABOUT
 
+.section__header--about {
+    padding-bottom: 25px;
+}
+
+.about__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__writeUpDiv {
+    flex-basis: 70%;
+}
+
+.about__writeUp {
+    padding-bottom: 25px;
+}
+
+.about__bigLogoDiv {
+    width: 260px;
+    margin-left: 50px;
+}
 
 // SKILLS
 
@@ -240,9 +272,9 @@ img {
     background: $light;
 }
 
-// .projects__wrapper {
-//     display: flex;
-// }
+.section__header--projects {
+    padding-bottom: 25px;
+}
 
 .projects__wrapper {
     display: flex;
@@ -343,6 +375,21 @@ img {
 .contact__contactOption,
 .contact__link {
     color: $light;
+    transition: all 0.2s;
+    font-size: 2.5rem;
+}
+
+.contact__contactOption {
+    position: relative;
+}
+
+.contact__contactOption::before {
+    content: "$";
+    position: absolute;
+}
+
+.contact__link:hover {
+    color: $yellow;
 }
 
 .contact__options {
