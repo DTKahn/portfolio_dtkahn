@@ -346,6 +346,8 @@ img {
     background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../public/assets/toronto_bw.jpg) 50% 20%;
     background-size: cover;
     position: relative;
+    // padding: 50px 0 150px 0;
+    min-height: 100vh;
 }
 
 .torontoBg {
@@ -381,11 +383,42 @@ img {
 
 .contact__contactOption {
     position: relative;
+    margin-left: 40px;
+    line-height: 1.8;
 }
 
 .contact__contactOption::before {
-    content: "$";
     position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    left: -40px;
+}
+
+.contact__contactOption--location::before {
+    content: "\f3c5";
+}
+
+.contact__contactOption--email::before {
+    content: "\f0e0";
+}
+
+.contact__contactOption--phone::before {
+    content: "\f095";
+}
+
+.contact__contactOption--linkedIn::before {
+    content: "\f0e1";
+    font-family: "Font Awesome 5 Brands";
+}
+
+.contact__contactOption--gitHub::before {
+    content: "\f09b";
+    font-family: "Font Awesome 5 Brands";
+}
+
+.contact__contactOption--twitter::before {
+    content: "\f099";
+    font-family: "Font Awesome 5 Brands";
 }
 
 .contact__link:hover {
@@ -417,20 +450,18 @@ img {
     resize: none;
 }
 
-.contact__input {
-    position: relative;
-}
-
 .contact__label {
-    position: absolute;
-    color: $dark;
-    top: 10px;
-    left: 20px;
+    color: $light;
+    padding-bottom: 5px;
+    display: block;
 }
 
 .contact__send {
-    border: 1px solid #141414;
+    min-width: 105px;
+    width: 25%;
+    border: none;
     padding: 10px 25px;
+    text-align: center;
     background: white;
     color: #141414;
     transition: all 0.2s;
