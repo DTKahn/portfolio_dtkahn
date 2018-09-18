@@ -318,17 +318,20 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 75px 0;
+    flex-wrap: wrap;
 }
 
 .projects__keyFeaturesList {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .projects__keyFeature {
     margin-right: 10px;
     padding: 2px 10px;
     background: $yellow;
+    margin-bottom: 10px;
 }
 
 .projects__links {
@@ -614,6 +617,49 @@ img {
 //////////////////
 // START 800px //
 //////////////////
+
+@media (max-width: 800px) {
+    // ABOUT
+
+    .about__content {
+        flex-wrap: wrap;
+    }
+
+    .about__writeUpDiv {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .about__bigLogoDiv {
+        width: 100%;
+        text-align: center;
+        margin-left:0;
+        margin-bottom: 50px;
+    }
+
+    .about__bigLogo {
+        width: 50%;
+    }
+
+    // PROJECTS
+
+    .projects__imgDiv {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .projects__projectInfo {
+        width: 100%;
+    }
+}
+
+//////////////////
+//  END 800px  //
+//////////////////
+
+//////////////////
+// START 675px //
+//////////////////
 @media (max-width: 675px) {
     .hero {
         height: 100vh;
@@ -621,10 +667,13 @@ img {
         background-size: cover;
     }
 
+    
+
 }
 //////////////////
-//  END 800px  //
+//  END 675px  //
 //////////////////
+
 
 //////////////////
 // START 600px //
@@ -653,6 +702,24 @@ img {
 }
 //////////////////
 //  END 600px  //
+//////////////////
+
+//////////////////
+// START 500px //
+//////////////////
+@media (max-width: 500px) {
+
+    .skills__listOfSkills {
+        // display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // justify-items: center;
+        // align-items: end;
+    }
+
+
+}
+//////////////////
+//  END 500px  //
 //////////////////
 
 //////////////////
