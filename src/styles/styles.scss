@@ -131,7 +131,6 @@ img {
     font-size: 2rem;
     text-transform: uppercase;
     padding: 5px 0 5px 5px;
-    // margin-left: 15px;
 }
 
 .nav__li {
@@ -565,20 +564,25 @@ img {
         display: inline-block;
     }
 
+    .navBar {
+
+        z-index: 50;
+    }
+
     .nav__listOfLinks {
         position: absolute;
         flex-wrap: wrap;
         top: 60px;
-        right: calc(0px - 5vw);
         text-align: right;
         background: rgb(129, 129, 129);
         width: 100vw;
         flex-direction: column;
         transition: all 0.3s;
-    }
-
-    .header__navCheckbox:checked ~ .nav__listOfLinks {
         right: calc(-105vw);
+    }
+    
+    .header__navCheckbox:checked ~ .nav__listOfLinks {
+        right: -5vw;
     }
     
     .nav__li {
@@ -597,9 +601,95 @@ img {
         justify-content: flex-end;
     }
 
-
-
+    .nav__a:hover,
+    .nav__li:hover {
+        color: $yellow;
+        transform: scale(1.00);
+    }
 }
 //////////////////
 //  END 1000px  //
+//////////////////
+
+//////////////////
+// START 800px //
+//////////////////
+@media (max-width: 675px) {
+    .hero {
+        height: 100vh;
+        background: linear-gradient(rgba(20, 20, 20, 0.2),rgba(20, 20, 20, 0.5)), url(../../public/assets/hero_bw_bg2.jpg) 20% 50%;
+        background-size: cover;
+    }
+
+}
+//////////////////
+//  END 800px  //
+//////////////////
+
+//////////////////
+// START 600px //
+//////////////////
+@media (max-width: 600px) {
+    .hero__header {
+        font-size: 7rem;
+    }
+
+    .hero__subheader {
+        font-size: 3.5rem;
+    }
+
+    .hero__inner {
+        width: 100%;
+        align-content: flex-end;
+    }
+
+    .hero__header {
+        font-size: 6rem;
+    }
+
+    .hero__subheader {
+        font-size: 4rem;
+    }
+}
+//////////////////
+//  END 600px  //
+//////////////////
+
+//////////////////
+// START 480px //
+//////////////////
+@media (max-width: 480px) {
+    .hero__header {
+        font-size: 5rem;
+    }
+
+    .hero__subheader {
+        font-size: 3rem;
+    }
+
+}
+//////////////////
+//  END 480px  //
+//////////////////
+
+//////////////////
+// START 380px  //
+//////////////////
+@media (max-width: 380px) {
+
+    .logoName {
+        min-width: 220px;
+    }
+
+    .logoName__name {
+        font-size: 2.5rem;
+    }
+    
+    .hero__header {
+        font-size: 4rem;
+    }
+
+}
+//////////////////
+//  END 380px   //
 //////////////////
