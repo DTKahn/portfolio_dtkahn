@@ -111,7 +111,25 @@ img {
     font-size: 2rem;
     text-transform: uppercase;
     padding: 5px 0 5px 5px;
+    // margin-left: 15px;
+}
+
+.nav__li {
     margin-left: 15px;
+}
+
+
+.nav__a,
+.nav__li{
+
+    transition: all 0.2s;
+}
+
+
+.nav__a:hover,
+.nav__li:hover {
+    color: $yellow;
+    transform: scale(1.05);
 }
 
 
@@ -319,8 +337,8 @@ img {
     background: $yellow;
 }
 
-.projects__view--onGitHub {
-    margin-left: 30px;
+.projects__view {
+    margin-right: 30px;
 }
 
 .projects__listOfProjects li:nth-child(2n+0) {
@@ -333,6 +351,8 @@ img {
 
     & .projects__view {
         background: $light;
+        margin-right: 0;
+        margin-left: 30px;
 
         &:hover {
             background: $yellow;
@@ -343,7 +363,7 @@ img {
 // CONTACT
 
 .contact {
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../public/assets/toronto_bw.jpg) 50% 20%;
+    background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(../../public/assets/toronto_bw.jpg) 50% 20%;
     background-size: cover;
     position: relative;
     // padding: 50px 0 150px 0;
@@ -374,6 +394,10 @@ img {
     display: flex;
 }
 
+.contact__options {
+    width: 100%;
+}
+
 .contact__contactOption,
 .contact__link {
     color: $light;
@@ -383,15 +407,25 @@ img {
 
 .contact__contactOption {
     position: relative;
-    margin-left: 40px;
-    line-height: 1.8;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact__contactOption--location,
+.contact__link {
+    display: block;
+    padding: 10px;
 }
 
 .contact__contactOption::before {
     position: absolute;
     font-family: "Font Awesome 5 Free";
     font-weight: bold;
-    left: -40px;
+    left: -60px;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .contact__contactOption--location::before {
@@ -423,14 +457,6 @@ img {
 
 .contact__link:hover {
     color: $yellow;
-}
-
-.contact__options {
-    width: 30%;
-}
-
-.contact__form {
-    width: 70%;
 }
 
 .contact__label {
@@ -466,7 +492,8 @@ img {
     color: #141414;
     transition: all 0.2s;
 }
-
-.contact__send:hover {
-    background: $yellow;
+.contact__contactOption:hover:not(.contact__contactOption--location),
+.contact__send:hover:not(.contact__contactOption--location) {
+    color: $yellow;
+    transform: scale(1.03);
 }
