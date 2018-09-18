@@ -65,6 +65,25 @@ img {
     width: 100%;
 }
 
+.header__navCheckbox {
+    display: none;
+}
+
+.header__hamburger {
+    color: $light;
+    padding: 10px;
+    font-size: 3rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: inline-block;
+    display: none;
+}
+
+.header__hamburger:hover {
+    color: $yellow;
+    transform: scale(1.05);
+}
+
 .navBar__background {
     position: fixed;
     z-index: 20;
@@ -84,6 +103,7 @@ img {
 .logoName {
     display: flex;
     align-items: center;
+    min-width: 270px;
 }
 
 .logoName__name {
@@ -334,6 +354,7 @@ img {
 
 .projects__links {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .projects__view {
@@ -342,14 +363,12 @@ img {
     background: white;
     color: $dark;
     transition: all 0.2s;
+    margin-right: 30px;
+    margin-bottom: 20px;
 }
 
 .projects__view:hover {
     background: $yellow;
-}
-
-.projects__view {
-    margin-right: 30px;
 }
 
 .projects__listOfProjects .projects__projectLi:nth-child(2n+0) {
@@ -366,7 +385,8 @@ img {
     }
 
     & .projects__links {
-        float: right;
+        // flex-direction: row-reverse;
+        justify-content: flex-end;
     }
 
     & .projects__view {
@@ -386,7 +406,7 @@ img {
     // no granim
     background: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(../../public/assets/toronto_bw.jpg) 50% 20%;
     // granim
-    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(../../public/assets/toronto_bw.jpg) 50% 20%;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(../../public/assets/toronto_bw.jpg) 50% 20%;
     background-size: cover;
     position: relative;
     // padding: 50px 0 150px 0;
@@ -520,3 +540,66 @@ img {
     color: $yellow;
     transform: scale(1.03);
 }
+
+///////////////////
+///////////////////
+// MEDIA QUERIES //
+///////////////////
+///////////////////
+
+//////////////////
+// START 1200px //
+//////////////////
+// @media (max-width: 1200px) {
+
+// }
+//////////////////
+//  END 1200px  //
+//////////////////
+
+//////////////////
+// START 1000px //
+//////////////////
+@media (max-width: 1000px) {
+    .header__hamburger {
+        display: inline-block;
+    }
+
+    .nav__listOfLinks {
+        position: absolute;
+        flex-wrap: wrap;
+        top: 60px;
+        right: calc(0px - 5vw);
+        text-align: right;
+        background: rgb(129, 129, 129);
+        width: 100vw;
+        flex-direction: column;
+        transition: all 0.3s;
+    }
+
+    .header__navCheckbox:checked ~ .nav__listOfLinks {
+        right: calc(-105vw);
+    }
+    
+    .nav__li {
+        padding-right: 5vw;
+    }
+
+    .nav__a {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .nav__li,
+    .nav__a {
+        font-size: 3rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+
+}
+//////////////////
+//  END 1000px  //
+//////////////////
