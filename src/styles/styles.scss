@@ -253,6 +253,7 @@ img {
 
 .about__writeUpDiv {
     flex-basis: 70%;
+    flex-grow: 1;
 }
 
 .about__writeUp {
@@ -261,7 +262,7 @@ img {
 
 .about__bigLogoDiv {
     width: 260px;
-    margin-left: 50px;
+    margin-right: 50px;
 }
 
 // SKILLS
@@ -633,7 +634,7 @@ img {
     .about__bigLogoDiv {
         width: 100%;
         text-align: center;
-        margin-left:0;
+        margin-right:0;
         margin-bottom: 50px;
     }
 
