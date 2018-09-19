@@ -1,56 +1,59 @@
-// import Granim from 'granim';
+const app = {};
 
-// const granimInstance = new Granim({
-//     element: '#torontoBg',
-//     direction: 'top-bottom',
-//     opacity: [1, 1],
-//     isPausedWhenNotInView: true,
-//     states: {
-//         "default-state": {
-//             gradients: [
-//                 ['#29323c', '#485563'],
-//                 ['#FF6B6B', '#556270'],
-//                 ['#80d3fe', '#7ea0c4'],
-//                 ['#f0ab51', '#eceba3']
-//             ],
-//             transitionSpeed: 7000
-//         }
-//     }
-// });
+// Enables direct access from console to functions and variables in the namespace
+window.app = app;
 
-const pressed = [];
-const code = "bensbagels";
-// let frameCount = 0;
 
-const finishbagels = () => {
+// v1 of the portfolio at dtkahn.com was built during my time with HackerYou (hackeryou.com) while I was part of Cohort 19 - "Ben's Bagels". My friend Maggie Deuitch, also part of Ben's Bagels, built and shared the Ben's Bagel animation with the rest of the cohort. You can see more of her excellent work here: maggiedeuitch.com
+app.finishbagels = () => {
     let bagel = document.getElementById("bagel-container");
     bagel.className = "hide";
 }
 
-const trigger = () => {
+app.trigger = () => {
     setTimeout(
         function () {
-            finishbagels();
+            app.finishbagels();
         }, 10000);
 }
 
-const startbagels = () => {
+app.startbagels = () => {
     let bagel = document.getElementById("bagel-container");
     bagel.className = "show";
-    trigger();
+    app.trigger();
 
 }
 
-window.addEventListener("keyup", function (e) {
-    pressed.push(e.key);
-    pressed.splice(-code.length - 1, pressed.length - code.length);
+app.mobileMenu = () => {
 
-    if (pressed.join("").includes(code)) {
-        startbagels();
-    }
-});
+    $('#header__navHamburgerDiv').on('click', () => {
+        $('#nav__listOfLinks').toggleClass('showMenu');
+    });
+
+    $('.nav__li').on('click', () => {
+        $('#nav__listOfLinks').removeClass('showMenu');
+    });
+    
+}
+
+app.init = () => {
+    $('a').smoothScroll();
+
+    app.mobileMenu();
+    
+    app.pressed = [];
+    app.code = "bensbagels";
+    
+    window.addEventListener("keyup", function (e) {
+        app.pressed.push(e.key);
+        app.pressed.splice(-app.code.length - 1, app.pressed.length - app.code.length);
+    
+        if (app.pressed.join("").includes(app.code)) {
+            app.startbagels();
+        }
+    });
+}
 
 $(function () {
-    $('a').smoothScroll();
-        
+    app.init();
 });

@@ -69,10 +69,6 @@ img {
     width: 100%;
 }
 
-.header__navCheckbox {
-    display: none;
-}
-
 .header__hamburger {
     color: $light;
     padding: 10px;
@@ -642,8 +638,8 @@ img {
         transition: all 0.3s;
         right: calc(-105vw);
     }
-    
-    .header__navCheckbox:checked ~ .nav__listOfLinks {
+
+    .nav__listOfLinks.showMenu {
         right: -5vw;
     }
     
