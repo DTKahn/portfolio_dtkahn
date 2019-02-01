@@ -172,6 +172,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    align-items: center;
     width: 70%;
 }
 
@@ -179,6 +180,11 @@ img {
 .hero__subheader {
     width: 100%;
     text-align: center;
+}
+
+// Comment out if putting subheader back
+.hero__header {
+    padding-top: 22vh;
 }
 
 .hero__downChevronDiv {
@@ -761,6 +767,8 @@ img {
 @media (max-width: 600px) {
     .hero__header {
         font-size: 7rem;
+        // Comment out if putting subheader back
+        padding-top: 40vh;
     }
 
     .hero__subheader {
